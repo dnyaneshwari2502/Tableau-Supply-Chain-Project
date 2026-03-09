@@ -11,7 +11,7 @@ The main objective of this project was twofold:
 1. To perform a structured supply chain analysis using real-world style data.
 2. To deepen my hands-on experience with Tableau by building a complete analytics dashboard from scratch.
 
-While I have previously worked with business intelligence tools like Power BI in industry projects, this project was part of my personal upskilling effort to strengthen my Tableau expertise and understand how to design clean, interactive dashboards for business decision-making.
+While I have previously worked with business intelligence tools in industry projects, this project was part of my personal upskilling effort to strengthen my Tableau expertise and understand how to design clean, interactive dashboards for business decision-making. I wanted to gain deeper hands-on experience with Tableau since I had not previously worked with it extensively in industry-based projects.
 
 ## Business Questions Addressed
 The dashboard helps answer several important questions:
@@ -21,6 +21,7 @@ The dashboard helps answer several important questions:
 - How do sales vary over time?
 - Which shipping modes handle the most orders?
 - How long does it take for orders to ship after they are placed?
+- Which product sub-categories generate high sales but low profit?
 
 These insights help organizations better understand demand patterns and identify potential operational improvements.
 
@@ -30,7 +31,7 @@ The project uses the **Global Superstore dataset**, which includes:
 - Order Date
 - Ship Date
 - Shipping Mode
-- Region, Country
+- Region, Country, City
 - Product Category and Sub-Category
 - Sales
 - Profit
@@ -42,12 +43,14 @@ This dataset allows analysis of both **sales performance and supply chain behavi
 ## Key Metrics Used
 Several key metrics were used in the dashboard:
 
-- **Total Sales**
-- **Total Profit**
-- **Sales Trend Over Time**
-- **Profit by Product Category**
-- **Sales by Shipping Mode**
-- **Shipping Time (Order Date → Ship Date)**
+- Total Sales
+- Total Profit
+- Total Orders
+- Average Shipping Days
+- Sales Trend Over Time
+- Profit by Product Category
+- Sales by Shipping Mode
+- Shipping Time Distribution
 
 A calculated field was created to analyze logistics performance:
 
@@ -58,22 +61,31 @@ This metric helps understand order fulfillment time.
 ## Dashboard Components
 The Tableau dashboard includes the following visualizations:
 
-1. **Monthly Sales Trend**  
-   A time-series view showing how sales evolve across months.
+1. **KPI Summary Cards**
+   - Total Sales
+   - Total Profit
+   - Total Orders
+   - Average Shipping Days
 
-2. **Sales by Country (Map Visualization)**  
+2. **Monthly Sales Trend**
+   A time-series view showing how sales evolved across months.
+
+3. **Sales by Country (Map Visualization)**
    Highlights geographic demand and helps identify strong markets.
 
-3. **Profit by Product Category**  
+4. **Profit by Product Category**
    Shows which product categories drive profitability.
 
-4. **Sales by Shipping Mode**  
+5. **Sales by Shipping Mode**
    Compares performance across different shipping methods.
 
-5. **Shipping Time Distribution**  
-   A histogram showing how long(in days) orders typically take to ship.
+6. **Shipping Time Distribution (Days)**
+   A histogram showing how long orders typically take to ship.
 
-The dashboard also supports interactive filtering.
+7. **Sales vs Profit by Sub-Category**
+   A scatter plot is used to analyze the relationship between sales and profit across product sub-categories. Reference lines are used to highlight performance quadrants and identify high- and low-performing product segments.
+
+The dashboard also supports interactive filtering by selecting regions directly on the map.
 
 ## Tools Used
 - Tableau Public
@@ -88,11 +100,25 @@ Through this project, I strengthened my understanding of:
 - Supply chain performance analysis
 - Creating calculated fields and custom metrics
 - Designing dashboards with a clear analytical flow
+- Building multi-chart dashboards that support business decision making
 
+## How to View the Dashboard
+You can download the Tableau workbook from this repository and open it using **Tableau Public**.
 
+## Repository Contents
+dataset/  
+Global-Superstore.xlsx  
+
+dashboard/  
+SupplyChain_Performance_Dashboard.twbx  
+
+Output/  
+Dashboard_Screenshot.png  
 
 ## Author
 **Dnyaneshwari Rakshe**  
 MS Data Science — University of Colorado Boulder
 
 This project is part of my continuous effort to build strong practical skills in data analytics, business intelligence, and applied data science.
+
+**Thank You!**
